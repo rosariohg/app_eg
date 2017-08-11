@@ -1,5 +1,5 @@
 //
-//  SecondViewController.swift
+//  CalendarioViewController.swift
 //  egasa
 //
 //  Created by rosario on 7/27/17.
@@ -7,19 +7,26 @@
 //
 
 import UIKit
+import FSCalendar
 
-class SecondViewController: UIViewController {
+class CalendarioViewController: UIViewController, FSCalendarDelegate, FSCalendarDataSource{
 
+    
+    @IBOutlet weak var calendar: FSCalendar!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
+        //let calendar = FSCalendar(frame: CGRect(x:0, y:0, width:320, height: 300))
+       
+        calendar.dataSource = self
+        calendar.delegate = self
+        
+        view.addSubview(calendar)
+        //self.calendar = calendar
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-
+    
+    
 
 }
 

@@ -1,0 +1,23 @@
+PODS:
+  - Charts (3.0.2):
+    - Charts/Core (= 3.0.2)
+  - Charts/Core (3.0.2)
+  - FSCalendar (2.7.7)
+  - GlyuckDataGrid (0.3.0)
+  - SwiftGifOrigin (1.6.1)
+
+DEPENDENCIES:
+  - Charts
+  - FSCalendar
+  - GlyuckDataGrid
+  - SwiftGifOrigin
+
+SPEC CHECKSUMS:
+  Charts: 236d6ccdd0ce6feae151d89e829a7397381a21fd
+  FSCalendar: 8bda3534e8590b87124af9a236887314e0359a27
+  GlyuckDataGrid: 3c0a025f62438e1a56aa84326c26906ebabda710
+  SwiftGifOrigin: d6679d3ebe9df2e049a84bc52582635107b581f6
+
+PODFILE CHECKSUM: 8102608af17749e665796739409c5917d8cb1aaf
+
+COCOAPODS: 1.2.1
