@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="iub-ES-gp4">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="iub-ES-gp4">
     <device id="retina4_0" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -149,21 +149,24 @@
                                     <constraint firstAttribute="width" constant="276" id="u6q-4I-dCe"/>
                                 </constraints>
                             </view>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4gz-mh-TpJ" customClass="CombinedChartView" customModule="Charts">
-                                <rect key="frame" x="40" y="309" width="240" height="128"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jKl-61-cZh" customClass="LineChartView" customModule="Charts">
+                                <rect key="frame" x="22" y="309" width="276" height="185"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="jKl-61-cZh" firstAttribute="top" secondItem="TpO-dc-N76" secondAttribute="bottom" constant="30" id="0VB-83-STA"/>
+                            <constraint firstItem="jKl-61-cZh" firstAttribute="height" secondItem="TpO-dc-N76" secondAttribute="height" id="7qE-4O-N52"/>
                             <constraint firstItem="TpO-dc-N76" firstAttribute="centerX" secondItem="yWi-bE-IhB" secondAttribute="centerX" id="Okw-hS-IxH"/>
+                            <constraint firstItem="jKl-61-cZh" firstAttribute="centerX" secondItem="yWi-bE-IhB" secondAttribute="centerX" id="Tq2-kM-idi"/>
                             <constraint firstItem="TpO-dc-N76" firstAttribute="top" secondItem="42j-of-r5U" secondAttribute="bottom" constant="30" id="h6q-r7-sT9"/>
+                            <constraint firstItem="jKl-61-cZh" firstAttribute="width" secondItem="TpO-dc-N76" secondAttribute="width" id="hCv-XM-w4B"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="barChartView" destination="TpO-dc-N76" id="Fya-i0-dfI"/>
-                        <outlet property="grafico1ChartView" destination="4gz-mh-TpJ" id="rJX-Bq-NJZ"/>
+                        <outlet property="lineChartView" destination="jKl-61-cZh" id="9X8-Xu-CcI"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CRC-zP-1BL" userLabel="First Responder" sceneMemberID="firstResponder"/>

@@ -7,7 +7,7 @@ target 'egasa' do
 
   # Pods for egasa
 
-pod ’SwiftGifOrigin’
+pod 'SwiftGifOrigin'
 pod 'FSCalendar'
 pod 'GlyuckDataGrid'
 pod 'Charts'

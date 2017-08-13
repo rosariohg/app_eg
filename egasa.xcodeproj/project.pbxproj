@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1A07D55C1F3F810A0011A997 /* Funciones.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A07D55B1F3F810A0011A997 /* Funciones.swift */; };
 		22A1BC7D3B1082662170349D /* Pods_egasa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A3FE2077C098D872C0D4ACA /* Pods_egasa.framework */; };
 		24AA02681F30F5E700165E5C /* HistoricoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24AA02671F30F5E700165E5C /* HistoricoViewController.swift */; };
 		24E2074B1F2A455500985900 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24E2074A1F2A455500985900 /* AppDelegate.swift */; };
@@ -22,6 +23,7 @@
 
 /* Begin PBXFileReference section */
 		0A3FE2077C098D872C0D4ACA /* Pods_egasa.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_egasa.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		1A07D55B1F3F810A0011A997 /* Funciones.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Funciones.swift; sourceTree = "<group>"; };
 		24AA02671F30F5E700165E5C /* HistoricoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HistoricoViewController.swift; sourceTree = "<group>"; };
 		24E207471F2A455500985900 /* egasa.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = egasa.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		24E2074A1F2A455500985900 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -83,6 +85,7 @@
 				24E207811F2A79E300985900 /* turbina.gif */,
 				24E207551F2A455500985900 /* LaunchScreen.storyboard */,
 				24E207581F2A455500985900 /* Info.plist */,
+				1A07D55B1F3F810A0011A997 /* Funciones.swift */,
 			);
 			path = egasa;
 			sourceTree = "<group>";
@@ -205,9 +208,18 @@
 			files = (
 			);
 			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-egasa/Pods-egasa-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Charts/Charts.framework",
+				"${BUILT_PRODUCTS_DIR}/FSCalendar/FSCalendar.framework",
+				"${BUILT_PRODUCTS_DIR}/GlyuckDataGrid/GlyuckDataGrid.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftGifOrigin/SwiftGifOrigin.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Charts.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FSCalendar.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GlyuckDataGrid.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftGifOrigin.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -220,13 +232,16 @@
 			files = (
 			);
 			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-egasa-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -236,6 +251,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1A07D55C1F3F810A0011A997 /* Funciones.swift in Sources */,
 				24E207841F2A8F4400985900 /* CollectionViewCell.swift in Sources */,
 				24E2074F1F2A455500985900 /* CalendarioViewController.swift in Sources */,
 				24E2077D1F2A6B7400985900 /* IniciarSesionViewController.swift in Sources */,

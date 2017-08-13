@@ -20,11 +20,16 @@ class TurbinaViewController: UIViewController, DataGridViewDataSource, DataGridV
     
     var cabeceras = ["Central", "Tiempo", "Diseno", "Porcentaje"]
     
-    let datos = [
+    var datos = [String]()
+    
+    /*let datos = [
         ["C.H. 5","85.11", "1145.35", "58.35 %"],
         ["C.T.P ","71.46", "74.80", "95.2 %"],
         ["C.T.C ","9.86", "32.81", "29.98 %"]
-     ]
+    ]*/
+    
+    //var data : [[String]] = [[]]
+
 
     static override func initialize() {
         super.initialize()
@@ -62,15 +67,56 @@ class TurbinaViewController: UIViewController, DataGridViewDataSource, DataGridV
         labelAppearance.appearanceTextAlignment = .center
     }
     
+    func parse() -> [String] {
+        let urlCompleto = "http://45.76.173.130:9090/"
+        let objUrl = URL(string: urlCompleto)
+        var data = [[String]]()
+        var data_arr : [String] = []
+        
+        let str = URLSession.shared.dataTask(with: objUrl!) {
+            datos, codigoHTTP, error in
+            if error != nil {
+                print(error!)
+            }else{
+                do{
+                    let json = try JSONSerialization.jsonObject(with: datos!, options: JSONSerialization.ReadingOptions.mutableContainers) as! [String:Any]
+                    data = json["data"] as!  [[String]]
+                    
+                    for i in data{
+                        for j in i {
+                            data_arr.append(j)
+                        }
+                    }
+                    
+                }
+                catch{
+                    print("Hubo un error")
+                }
+                
+            }
+            
+            
+        }
+
+        str.resume()
+        print(data_arr)
+        return data_arr
+
+    }
+
+    
     override func viewDidLoad() {
         self.gifIamgeView.image = UIImage.gif(name: "turbina")
-        //dataGridView.dataSource = self
         
-        //dataGridView.delegate = self
+        //dataGridView.dataSource = self
+        dataGridView.delegate = self
         dataGridView.dataSource = self
         lblTurbina.appearanceFont = UIFont.systemFont(ofSize: 30)
         dataGridView.rowHeaderWidth = 0
         dataGridView.columnHeaderHeight = 30
+        
+        self.datos = parse()
+        print(datos)
     }
     
     
@@ -84,19 +130,16 @@ class TurbinaViewController: UIViewController, DataGridViewDataSource, DataGridV
     
     // Then you'll need to provide titles for columns headers
     func dataGridView(_ dataGridView: DataGridView, titleForHeaderForRow row: Int) -> String {
-        print("aquiii")
-        
         return String("hi")
     }
     
     // And rows headers
     func dataGridView(_ dataGridView: DataGridView, titleForHeaderForColumn column: Int) -> String {
-        print(column)
         return cabeceras[column]
     }
     
     func dataGridView(_ dataGridView: DataGridView, textForCellAtIndexPath indexPath: IndexPath) -> String {
-        return datos[indexPath.dataGridRow][indexPath.dataGridColumn]
+        return datos[indexPath.dataGridRow]
         //return String((indexPath.dataGridRow + 1 ) * (indexPath.dataGridColumn + 1))
     }
     
