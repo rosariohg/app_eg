@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		1A07D55C1F3F810A0011A997 /* Funciones.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A07D55B1F3F810A0011A997 /* Funciones.swift */; };
+		1A5A3DFF1F423F0A00A1D695 /* charcani4_1.json in Resources */ = {isa = PBXBuildFile; fileRef = 1A5A3DFE1F423F0A00A1D695 /* charcani4_1.json */; };
+		1A5A3E011F42542C00A1D695 /* charcani4_2.json in Resources */ = {isa = PBXBuildFile; fileRef = 1A5A3E001F42542C00A1D695 /* charcani4_2.json */; };
 		22A1BC7D3B1082662170349D /* Pods_egasa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A3FE2077C098D872C0D4ACA /* Pods_egasa.framework */; };
 		24AA02681F30F5E700165E5C /* HistoricoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24AA02671F30F5E700165E5C /* HistoricoViewController.swift */; };
 		24E2074B1F2A455500985900 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24E2074A1F2A455500985900 /* AppDelegate.swift */; };
@@ -24,6 +26,8 @@
 /* Begin PBXFileReference section */
 		0A3FE2077C098D872C0D4ACA /* Pods_egasa.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_egasa.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1A07D55B1F3F810A0011A997 /* Funciones.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Funciones.swift; sourceTree = "<group>"; };
+		1A5A3DFE1F423F0A00A1D695 /* charcani4_1.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = charcani4_1.json; sourceTree = "<group>"; };
+		1A5A3E001F42542C00A1D695 /* charcani4_2.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = charcani4_2.json; sourceTree = "<group>"; };
 		24AA02671F30F5E700165E5C /* HistoricoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HistoricoViewController.swift; sourceTree = "<group>"; };
 		24E207471F2A455500985900 /* egasa.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = egasa.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		24E2074A1F2A455500985900 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -86,6 +90,8 @@
 				24E207551F2A455500985900 /* LaunchScreen.storyboard */,
 				24E207581F2A455500985900 /* Info.plist */,
 				1A07D55B1F3F810A0011A997 /* Funciones.swift */,
+				1A5A3E001F42542C00A1D695 /* charcani4_2.json */,
+				1A5A3DFE1F423F0A00A1D695 /* charcani4_1.json */,
 			);
 			path = egasa;
 			sourceTree = "<group>";
@@ -179,8 +185,10 @@
 			files = (
 				24E207571F2A455500985900 /* LaunchScreen.storyboard in Resources */,
 				24E207541F2A455500985900 /* Assets.xcassets in Resources */,
+				1A5A3E011F42542C00A1D695 /* charcani4_2.json in Resources */,
 				24E207521F2A455500985900 /* Main.storyboard in Resources */,
 				24E207821F2A79E300985900 /* turbina.gif in Resources */,
+				1A5A3DFF1F423F0A00A1D695 /* charcani4_1.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

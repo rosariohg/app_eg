@@ -20,7 +20,8 @@ class TurbinaViewController: UIViewController, DataGridViewDataSource, DataGridV
     
     var cabeceras = ["Central", "Tiempo", "Diseno", "Porcentaje"]
     
-    var datos = [String]()
+    var datos = [[String]]()
+    
     
     /*let datos = [
         ["C.H. 5","85.11", "1145.35", "58.35 %"],
@@ -67,43 +68,34 @@ class TurbinaViewController: UIViewController, DataGridViewDataSource, DataGridV
         labelAppearance.appearanceTextAlignment = .center
     }
     
-    func parse() -> [String] {
+    func parse() {
         let urlCompleto = "http://45.76.173.130:9090/"
         let objUrl = URL(string: urlCompleto)
         var data = [[String]]()
-        var data_arr : [String] = []
-        
+
+        print("iniciando llamada")
         let str = URLSession.shared.dataTask(with: objUrl!) {
-            datos, codigoHTTP, error in
+            dats, codigoHTTP, error in
             if error != nil {
                 print(error!)
             }else{
                 do{
-                    let json = try JSONSerialization.jsonObject(with: datos!, options: JSONSerialization.ReadingOptions.mutableContainers) as! [String:Any]
+                    let json = try JSONSerialization.jsonObject(with: dats!, options: JSONSerialization.ReadingOptions.mutableContainers) as! [String:Any]
                     data = json["data"] as!  [[String]]
-                    
-                    for i in data{
-                        for j in i {
-                            data_arr.append(j)
-                        }
+                    self.datos = data
+                    DispatchQueue.main.async(){
+                        //code
+                        self.dataGridView.reloadData()
                     }
                     
                 }
                 catch{
                     print("Hubo un error")
                 }
-                
             }
-            
-            
         }
-
         str.resume()
-        print(data_arr)
-        return data_arr
-
     }
-
     
     override func viewDidLoad() {
         self.gifIamgeView.image = UIImage.gif(name: "turbina")
@@ -115,8 +107,9 @@ class TurbinaViewController: UIViewController, DataGridViewDataSource, DataGridV
         dataGridView.rowHeaderWidth = 0
         dataGridView.columnHeaderHeight = 30
         
-        self.datos = parse()
-        print(datos)
+        parse()
+        var timer = Timer()
+        timer = Timer.scheduledTimer(timeInterval: 10, target: self, selector: #selector(parse), userInfo: nil, repeats: true)
     }
     
     
@@ -139,7 +132,7 @@ class TurbinaViewController: UIViewController, DataGridViewDataSource, DataGridV
     }
     
     func dataGridView(_ dataGridView: DataGridView, textForCellAtIndexPath indexPath: IndexPath) -> String {
-        return datos[indexPath.dataGridRow]
+        return datos[indexPath.dataGridRow][indexPath.dataGridColumn]
         //return String((indexPath.dataGridRow + 1 ) * (indexPath.dataGridColumn + 1))
     }
     
