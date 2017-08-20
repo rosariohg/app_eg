@@ -11,5 +11,11 @@ pod 'SwiftGifOrigin'
 pod 'FSCalendar'
 pod 'GlyuckDataGrid'
 pod 'Charts'
+pod 'HAActionSheet'
+pod 'Firebase'
+pod 'Firebase/Core'
+pod 'Firebase/Auth'
+pod 'Firebase/Database'
+pod 'Firebase/Storage'
 
 end

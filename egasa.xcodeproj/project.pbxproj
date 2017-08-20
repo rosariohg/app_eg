@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		1A07D55C1F3F810A0011A997 /* Funciones.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A07D55B1F3F810A0011A997 /* Funciones.swift */; };
-		1A5A3DFF1F423F0A00A1D695 /* charcani4_1.json in Resources */ = {isa = PBXBuildFile; fileRef = 1A5A3DFE1F423F0A00A1D695 /* charcani4_1.json */; };
+		1A56E3B71F49198A0002FD86 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1A56E3B61F49198A0002FD86 /* GoogleService-Info.plist */; };
 		1A5A3E011F42542C00A1D695 /* charcani4_2.json in Resources */ = {isa = PBXBuildFile; fileRef = 1A5A3E001F42542C00A1D695 /* charcani4_2.json */; };
 		22A1BC7D3B1082662170349D /* Pods_egasa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A3FE2077C098D872C0D4ACA /* Pods_egasa.framework */; };
 		24AA02681F30F5E700165E5C /* HistoricoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24AA02671F30F5E700165E5C /* HistoricoViewController.swift */; };
@@ -26,7 +26,8 @@
 /* Begin PBXFileReference section */
 		0A3FE2077C098D872C0D4ACA /* Pods_egasa.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_egasa.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1A07D55B1F3F810A0011A997 /* Funciones.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Funciones.swift; sourceTree = "<group>"; };
-		1A5A3DFE1F423F0A00A1D695 /* charcani4_1.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = charcani4_1.json; sourceTree = "<group>"; };
+		1A56E3B61F49198A0002FD86 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		1A56E3B81F4928A10002FD86 /* egasa.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = egasa.entitlements; sourceTree = "<group>"; };
 		1A5A3E001F42542C00A1D695 /* charcani4_2.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = charcani4_2.json; sourceTree = "<group>"; };
 		24AA02671F30F5E700165E5C /* HistoricoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HistoricoViewController.swift; sourceTree = "<group>"; };
 		24E207471F2A455500985900 /* egasa.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = egasa.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -77,6 +78,7 @@
 		24E207491F2A455500985900 /* egasa */ = {
 			isa = PBXGroup;
 			children = (
+				1A56E3B81F4928A10002FD86 /* egasa.entitlements */,
 				24E2077E1F2A748400985900 /* images */,
 				24E2074A1F2A455500985900 /* AppDelegate.swift */,
 				24E2074C1F2A455500985900 /* TurbinaViewController.swift */,
@@ -91,7 +93,7 @@
 				24E207581F2A455500985900 /* Info.plist */,
 				1A07D55B1F3F810A0011A997 /* Funciones.swift */,
 				1A5A3E001F42542C00A1D695 /* charcani4_2.json */,
-				1A5A3DFE1F423F0A00A1D695 /* charcani4_1.json */,
+				1A56E3B61F49198A0002FD86 /* GoogleService-Info.plist */,
 			);
 			path = egasa;
 			sourceTree = "<group>";
@@ -157,6 +159,11 @@
 						CreatedOnToolsVersion = 8.3.3;
 						DevelopmentTeam = 9MFXUF664H;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Keychain = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -188,7 +195,7 @@
 				1A5A3E011F42542C00A1D695 /* charcani4_2.json in Resources */,
 				24E207521F2A455500985900 /* Main.storyboard in Resources */,
 				24E207821F2A79E300985900 /* turbina.gif in Resources */,
-				1A5A3DFF1F423F0A00A1D695 /* charcani4_1.json in Resources */,
+				1A56E3B71F49198A0002FD86 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -219,15 +226,23 @@
 				"${SRCROOT}/Pods/Target Support Files/Pods-egasa/Pods-egasa-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Charts/Charts.framework",
 				"${BUILT_PRODUCTS_DIR}/FSCalendar/FSCalendar.framework",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GlyuckDataGrid/GlyuckDataGrid.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/HAActionSheet/HAActionSheet.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftGifOrigin/SwiftGifOrigin.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Charts.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FSCalendar.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GlyuckDataGrid.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/HAActionSheet.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftGifOrigin.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -391,6 +406,7 @@
 			baseConfigurationReference = BB69E14742CAD78EAF57AFF0 /* Pods-egasa.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = egasa/egasa.entitlements;
 				DEVELOPMENT_TEAM = 9MFXUF664H;
 				INFOPLIST_FILE = egasa/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -405,6 +421,7 @@
 			baseConfigurationReference = AE478A4D1BECF83F54C2A39A /* Pods-egasa.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = egasa/egasa.entitlements;
 				DEVELOPMENT_TEAM = 9MFXUF664H;
 				INFOPLIST_FILE = egasa/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

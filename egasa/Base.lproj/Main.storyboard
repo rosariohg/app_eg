@@ -189,7 +189,7 @@
                                 <rect key="frame" x="60" y="240" width="200" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jp3-V8-OwG">
                                 <rect key="frame" x="114.5" y="320" width="91" height="30"/>
@@ -262,7 +262,7 @@
         <scene sceneID="CBk-gQ-JBv">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="5Xd-XC-wI5" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Turbinas" image="first" id="acW-dT-cKf"/>
+                    <tabBarItem key="tabBarItem" title="Turbinas" image="first" id="acW-dT-cKf" customClass="I"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="qo1-Sa-z2D">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
