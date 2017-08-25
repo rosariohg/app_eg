@@ -23,10 +23,6 @@ class TurbinaViewController: UIViewController, DataGridViewDataSource, DataGridV
     
     var datos = [[String]]()
     
-    let data = ["Turbina 1",
-                "Turbina 2",
-                "Turbina 3"]
-    
     /*let datos = [
         ["C.H. 5","85.11", "1145.35", "58.35 %"],
         ["C.T.P ","71.46", "74.80", "95.2 %"],
@@ -115,18 +111,8 @@ class TurbinaViewController: UIViewController, DataGridViewDataSource, DataGridV
         parse()
         var timer = Timer()
         timer = Timer.scheduledTimer(timeInterval: 10, target: self, selector: #selector(parse), userInfo: nil, repeats: true)
-        
-        let view = HAActionSheet(fromView: self.view, sourceData: data)
-        //view.buttonCornerRadius = 30
-        view.center = CGPoint(x: UIScreen.main.bounds.size.width*0.5,y: UIScreen.main.bounds.size.height*0.5 - 50)
-        view.show { (canceled,index) in
-            if !canceled {
-                print(self.data[index!])
-            }
-            
-        }
-        
-        
+
+
     }
     
     

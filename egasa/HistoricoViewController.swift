@@ -9,6 +9,7 @@
 import UIKit
 import Charts
 
+
 class HistoricoViewController: UIViewController {
     
     @IBOutlet weak var barChartView: BarChartView!
@@ -18,13 +19,60 @@ class HistoricoViewController: UIViewController {
     var potencia_array = [Double]()
     var frecuencia_array = [Double]()
     
+    var datos = [[String]]()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         //setChart(xValues: months, yValuesLineChart: unitsSold, yValuesBarChart: unitsSold)
-        readJson()
-        setChartBar(dataPoints: fecha_array, values: potencia_array)
-        setChartLine(dataPoints: fecha_array, values: frecuencia_array)
+        //readJson()
+        //setChartBar(dataPoints: fecha_array, values: potencia_array)
+        //setChartLine(dataPoints: fecha_array, values: frecuencia_array)
+
+        parse(turb: "4",grupo: "1",fecha: "01/02/2017")
+    }
+    
+    func parse(turb: String,grupo :  String,fecha : String) {
+        let fecha_ = fecha.addingPercentEncoding(withAllowedCharacters: .urlHostAllowed)
+        let urlCompleto = "http://45.76.173.130:9090/historico?turbina=\(turb)&grupo=\(grupo)&fecha=\(fecha_!)"
+        let objUrl = URL(string: urlCompleto)
+        var data = [[String]]()
+        
+        print("---------------")
+        print(urlCompleto)
+        
+        let str = URLSession.shared.dataTask(with: objUrl!) {
+            dats, codigoHTTP, error in
+            if error != nil {
+                print(error!)
+            }else{
+                do{
+                    let json = try JSONSerialization.jsonObject(with: dats!, options: JSONSerialization.ReadingOptions.mutableContainers) as! [String:Any]
+                    data = json["data"] as!  [[String]]
+                    self.datos = data
+                    for i in data{
+                        self.fecha_array.append(i[0])
+                        self.potencia_array.append(Double(i[1])!)
+                        self.frecuencia_array.append(Double(i[2])!)
+                    }
+                    
+                    print("---------")
+                    print(self.fecha_array)
+                    
+                    DispatchQueue.main.async(){
+                     //code
+                     //self.dataGridView.reloadData()
+                        self.setChartBar(dataPoints: self.fecha_array, values: self.potencia_array)
+                        self.setChartLine(dataPoints: self.fecha_array, values: self.frecuencia_array)
+                    }
+                    
+                }
+                catch{
+                    print("Hubo un error")
+                }
+            }
+        }
+        str.resume()
     }
     
     func setChartBar(dataPoints: [String], values: [Double]){
@@ -68,8 +116,7 @@ class HistoricoViewController: UIViewController {
         do {
             if let file = Bundle.main.url(forResource: "charcani4_2", withExtension: "json") {
                 let data = try Data(contentsOf: file)
-                //let json = try JSONSerialization.jsonObject(with: data, options: [])
-                print("entro")
+                
                 var count = 0
                 if let json = try JSONSerialization.jsonObject(with: data, options:.allowFragments) as? [[String]] {
                     for i in json{

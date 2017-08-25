@@ -42,7 +42,7 @@ class IniciarSesionViewController: UIViewController {
                 })
             }else{
                 print("Inicio de Sesion exitoso")
-                self.performSegue(withIdentifier: "iniciarsesionsegue", sender: nil)
+                self.performSegue(withIdentifier: "iniciarsesionSegue", sender: nil)
             }
         })
     }
