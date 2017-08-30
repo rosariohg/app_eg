@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="iub-ES-gp4">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="iub-ES-gp4">
     <device id="retina4_0" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -105,7 +105,7 @@
                                 <rect key="frame" x="99.5" y="440" width="121" height="30"/>
                                 <state key="normal" title="Generar Histórico"/>
                                 <connections>
-                                    <segue destination="ChQ-cU-v6F" kind="show" id="gIK-fl-nZC"/>
+                                    <action selector="generarTapped:" destination="8rJ-Kc-sve" eventType="touchUpInside" id="pfT-6W-ll2"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -123,6 +123,7 @@
                     <navigationItem key="navigationItem" id="ceD-GG-w0x"/>
                     <connections>
                         <outlet property="calendar" destination="bYj-iD-9uv" id="UFN-lK-Ltj"/>
+                        <segue destination="ChQ-cU-v6F" kind="show" identifier="generarHistoricoSegue" id="dqH-8y-WYd"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Nw-L8-lE0" sceneMemberID="firstResponder"/>

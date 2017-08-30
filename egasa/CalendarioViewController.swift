@@ -75,6 +75,11 @@ class CalendarioViewController: UIViewController, FSCalendarDelegate, FSCalendar
         
     }
     
+    @IBAction func generarTapped(_ sender: Any) {
+        self.performSegue(withIdentifier: "generarHistoricoSegue", sender: nil)
+    }
+    
+    
     
 
 }
