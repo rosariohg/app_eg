@@ -21,6 +21,9 @@ class HistoricoViewController: UIViewController {
     
     var datos = [[String]]()
     
+    var turbina_selec = ""
+    var fecha_selec = ""
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -29,14 +32,14 @@ class HistoricoViewController: UIViewController {
         //setChartBar(dataPoints: fecha_array, values: potencia_array)
         //setChartLine(dataPoints: fecha_array, values: frecuencia_array)
 
-        parse(turb: "4",grupo: "1",fecha: "01/02/2017")
+        parse(turb: turbina_selec, fecha: fecha_selec)
     }
     
-    func parse(turb: String,grupo :  String,fecha : String) {
+    func parse(turb: String, fecha : String) {
         let fecha_ = fecha.addingPercentEncoding(withAllowedCharacters: .urlHostAllowed)
-        let urlCompleto = "http://45.76.173.130:9090/historico?turbina=\(turb)&grupo=\(grupo)&fecha=\(fecha_!)"
+        let urlCompleto = "http://45.76.173.130:9090/historico?turbina=\(turb)&fecha=\(fecha_!)"
         let objUrl = URL(string: urlCompleto)
-        var data = [[String]]()
+        //var data = [[String]]()
         
         print("---------------")
         print(urlCompleto)
@@ -47,7 +50,8 @@ class HistoricoViewController: UIViewController {
                 print(error!)
             }else{
                 do{
-                    let json = try JSONSerialization.jsonObject(with: dats!, options: JSONSerialization.ReadingOptions.mutableContainers) as! [String:Any]
+                    print("gettedd")
+                    /*let json = try JSONSerialization.jsonObject(with: dats!, options: JSONSerialization.ReadingOptions.mutableContainers) as! [String:Any]
                     data = json["data"] as!  [[String]]
                     self.datos = data
                     for i in data{
@@ -64,7 +68,7 @@ class HistoricoViewController: UIViewController {
                      //self.dataGridView.reloadData()
                         self.setChartBar(dataPoints: self.fecha_array, values: self.potencia_array)
                         self.setChartLine(dataPoints: self.fecha_array, values: self.frecuencia_array)
-                    }
+                    }*/
                     
                 }
                 catch{

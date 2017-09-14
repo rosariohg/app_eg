@@ -24,13 +24,9 @@ class CalendarioViewController: UIViewController, FSCalendarDelegate, FSCalendar
                 "Turbina 5"]
     
     let data_indices = ["4","5"]
-    
     var turbina_seleccionada = ""
-    
     var fecha_seleccionada = [String]()
-    
     var fecha = ""
-    
     var date = Date()
     
     override func viewDidLoad() {
@@ -51,6 +47,12 @@ class CalendarioViewController: UIViewController, FSCalendarDelegate, FSCalendar
         fecha = fecha_seleccionada[0]
         print(fecha)
         
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        print ("will appear")
         let vista = HAActionSheet(fromView: self.view, sourceData: data)
         //view.buttonCornerRadius = 30
         vista.center = CGPoint(x: UIScreen.main.bounds.size.width*0.5,y: UIScreen.main.bounds.size.height*0.5 + 30)
@@ -72,14 +74,24 @@ class CalendarioViewController: UIViewController, FSCalendarDelegate, FSCalendar
         fecha_seleccionada = calendar.selectedDates.map({formatter.string(from: $0)})
         fecha = fecha_seleccionada[0]
         print("selected dates is \(fecha)")
-        
+    }
+    
+    // disable future dates
+    func maximumDate(for calendar: FSCalendar) -> Date {
+        return Date()
     }
     
     @IBAction func generarTapped(_ sender: Any) {
         self.performSegue(withIdentifier: "generarHistoricoSegue", sender: nil)
     }
     
-    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "generarHistoricoSegue" {
+            let nextVC = segue.destination as! HistoricoViewController
+            nextVC.turbina_selec = turbina_seleccionada
+            nextVC.fecha_selec = fecha
+        }
+    }
     
 
 }
