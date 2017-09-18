@@ -142,32 +142,50 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TpO-dc-N76" customClass="BarChartView" customModule="Charts">
-                                <rect key="frame" x="22" y="94" width="276" height="185"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="185" id="1Qn-4r-hxt"/>
-                                    <constraint firstAttribute="width" constant="276" id="u6q-4I-dCe"/>
-                                </constraints>
-                            </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jKl-61-cZh" customClass="LineChartView" customModule="Charts">
+                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jKl-61-cZh" customClass="LineChartView" customModule="Charts">
                                 <rect key="frame" x="22" y="309" width="276" height="185"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="c26-Im-nkh">
+                                <rect key="frame" x="40" y="84" width="240" height="128"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="240" id="deF-TN-UXb"/>
+                                    <constraint firstAttribute="height" constant="128" id="gJQ-NA-6VK"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="7HU-5G-6jI">
+                                <rect key="frame" x="40" y="232" width="240" height="128"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="128" id="FxQ-CU-z33"/>
+                                    <constraint firstAttribute="width" constant="240" id="U6X-Bq-j6H"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="4vQ-Vf-Yx1">
+                                <rect key="frame" x="40" y="385" width="240" height="128"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="128" id="A9s-cl-wR9"/>
+                                    <constraint firstAttribute="width" constant="240" id="Kzz-5u-BIS"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="jKl-61-cZh" firstAttribute="top" secondItem="TpO-dc-N76" secondAttribute="bottom" constant="30" id="0VB-83-STA"/>
-                            <constraint firstItem="jKl-61-cZh" firstAttribute="height" secondItem="TpO-dc-N76" secondAttribute="height" id="7qE-4O-N52"/>
-                            <constraint firstItem="TpO-dc-N76" firstAttribute="centerX" secondItem="yWi-bE-IhB" secondAttribute="centerX" id="Okw-hS-IxH"/>
+                            <constraint firstItem="c26-Im-nkh" firstAttribute="centerX" secondItem="yWi-bE-IhB" secondAttribute="centerX" id="0OE-Bn-XA3"/>
+                            <constraint firstItem="7HU-5G-6jI" firstAttribute="centerX" secondItem="yWi-bE-IhB" secondAttribute="centerX" id="1pc-O2-aT9"/>
+                            <constraint firstItem="4vQ-Vf-Yx1" firstAttribute="top" secondItem="7HU-5G-6jI" secondAttribute="bottom" constant="25" id="3j1-sO-zU8"/>
+                            <constraint firstItem="4vQ-Vf-Yx1" firstAttribute="centerX" secondItem="yWi-bE-IhB" secondAttribute="centerX" id="7yE-79-1te"/>
+                            <constraint firstItem="4vQ-Vf-Yx1" firstAttribute="width" secondItem="7HU-5G-6jI" secondAttribute="width" id="Pfy-Aa-E6i"/>
                             <constraint firstItem="jKl-61-cZh" firstAttribute="centerX" secondItem="yWi-bE-IhB" secondAttribute="centerX" id="Tq2-kM-idi"/>
-                            <constraint firstItem="TpO-dc-N76" firstAttribute="top" secondItem="42j-of-r5U" secondAttribute="bottom" constant="30" id="h6q-r7-sT9"/>
-                            <constraint firstItem="jKl-61-cZh" firstAttribute="width" secondItem="TpO-dc-N76" secondAttribute="width" id="hCv-XM-w4B"/>
+                            <constraint firstItem="4vQ-Vf-Yx1" firstAttribute="top" secondItem="7HU-5G-6jI" secondAttribute="bottom" constant="25" id="X0J-iw-Ns9"/>
+                            <constraint firstItem="c26-Im-nkh" firstAttribute="top" secondItem="42j-of-r5U" secondAttribute="bottom" constant="20" id="nio-wF-6tj"/>
+                            <constraint firstItem="7HU-5G-6jI" firstAttribute="top" secondItem="c26-Im-nkh" secondAttribute="bottom" constant="20" id="sc1-7b-hSx"/>
+                            <constraint firstItem="7HU-5G-6jI" firstAttribute="width" secondItem="c26-Im-nkh" secondAttribute="width" id="zjt-e2-R3E"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="barChartView" destination="TpO-dc-N76" id="Fya-i0-dfI"/>
-                        <outlet property="lineChartView" destination="jKl-61-cZh" id="9X8-Xu-CcI"/>
+                        <outlet property="imgIma1" destination="c26-Im-nkh" id="9QB-rn-RLT"/>
+                        <outlet property="imgIma2" destination="7HU-5G-6jI" id="GH1-Om-7ki"/>
+                        <outlet property="imgIma3" destination="4vQ-Vf-Yx1" id="Ici-Ac-v45"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CRC-zP-1BL" userLabel="First Responder" sceneMemberID="firstResponder"/>

@@ -19,7 +19,7 @@ class TurbinaViewController: UIViewController, DataGridViewDataSource, DataGridV
     
     @IBOutlet weak var lblTurbina: UILabel!
     
-    var cabeceras = ["Central", "Tiempo", "Diseno", "Porcentaje"]
+    var cabeceras = ["Central", "Tiempo", "Diseño", "Porcentaje"]
     
     var datos = [[String]]()
     
@@ -30,8 +30,9 @@ class TurbinaViewController: UIViewController, DataGridViewDataSource, DataGridV
     ]*/
     
     //var data : [[String]] = [[]]
-
-
+    
+    var timer : Timer?
+    
     static override func initialize() {
         super.initialize()
         
@@ -46,11 +47,6 @@ class TurbinaViewController: UIViewController, DataGridViewDataSource, DataGridV
         cornerHeaderAppearance.borderRightWidth = 1 / UIScreen.main.scale
         cornerHeaderAppearance.borderRightColor = UIColor(white: 0.73, alpha: 1)
  
-        /*let rowHeaderAppearance = DataGridViewRowHeaderCell.glyuck_appearanceWhenContained(in: self)!
-        rowHeaderAppearance.backgroundColor = UIColor(white: 0.95, alpha: 1)
-        rowHeaderAppearance.borderBottomWidth = 1 / UIScreen.main.scale
-        rowHeaderAppearance.borderBottomColor = UIColor(white: 0.73, alpha: 1)
-        */
         let columnHeaderAppearance = DataGridViewColumnHeaderCell.glyuck_appearanceWhenContained(in: self)!
         columnHeaderAppearance.borderRightWidth = 1 / UIScreen.main.scale
         columnHeaderAppearance.borderRightColor = UIColor(white: 0.73, alpha: 1)
@@ -86,6 +82,7 @@ class TurbinaViewController: UIViewController, DataGridViewDataSource, DataGridV
                     DispatchQueue.main.async(){
                         //code
                         self.dataGridView.reloadData()
+                        
                     }
                     
                 }
@@ -106,13 +103,23 @@ class TurbinaViewController: UIViewController, DataGridViewDataSource, DataGridV
         lblTurbina.appearanceFont = UIFont.systemFont(ofSize: 30)
         dataGridView.rowHeaderWidth = 0
         dataGridView.columnHeaderHeight = 30
-        
-        
+                
         parse()
-        var timer = Timer()
-        timer = Timer.scheduledTimer(timeInterval: 10, target: self, selector: #selector(parse), userInfo: nil, repeats: true)
-
-
+        
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        if timer == nil {
+            timer = Timer.scheduledTimer(timeInterval: 10, target: self, selector: #selector(parse), userInfo: nil, repeats: true)
+        }
+        
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        if timer != nil {
+            timer?.invalidate()
+            timer = nil
+        }
     }
     
     
