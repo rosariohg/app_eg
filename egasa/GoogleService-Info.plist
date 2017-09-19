@@ -7,21 +7,21 @@
 	<key>AD_UNIT_ID_FOR_INTERSTITIAL_TEST</key>
 	<string>ca-app-pub-3940256099942544/4411468910</string>
 	<key>CLIENT_ID</key>
-	<string>273169951857-ndfk7ahv1o6smhc1jsfe1bgonfl5ke3d.apps.googleusercontent.com</string>
+	<string>2785406410-jj6i56h0ml1lnef2ll84923577okmsma.apps.googleusercontent.com</string>
 	<key>REVERSED_CLIENT_ID</key>
-	<string>com.googleusercontent.apps.273169951857-ndfk7ahv1o6smhc1jsfe1bgonfl5ke3d</string>
+	<string>com.googleusercontent.apps.2785406410-jj6i56h0ml1lnef2ll84923577okmsma</string>
 	<key>API_KEY</key>
-	<string>AIzaSyDuKPpErrZeF4u-KnmGhttVmF4PHP777Ac</string>
+	<string>AIzaSyCZzXXSEdCKI8GqhkyGyOXC95IX9P5HqYQ</string>
 	<key>GCM_SENDER_ID</key>
-	<string>273169951857</string>
+	<string>2785406410</string>
 	<key>PLIST_VERSION</key>
 	<string>1</string>
 	<key>BUNDLE_ID</key>
-	<string>com.debug.egasa</string>
+	<string>com.egasa.cshops</string>
 	<key>PROJECT_ID</key>
-	<string>app-egasa</string>
+	<string>egasa-a8725</string>
 	<key>STORAGE_BUCKET</key>
-	<string>app-egasa.appspot.com</string>
+	<string>egasa-a8725.appspot.com</string>
 	<key>IS_ADS_ENABLED</key>
 	<true/>
 	<key>IS_ANALYTICS_ENABLED</key>
@@ -33,8 +33,8 @@
 	<key>IS_SIGNIN_ENABLED</key>
 	<true/>
 	<key>GOOGLE_APP_ID</key>
-	<string>1:273169951857:ios:e44118c06d222ccb</string>
+	<string>1:2785406410:ios:7f90da473ec7ebe0</string>
 	<key>DATABASE_URL</key>
-	<string>https://app-egasa.firebaseio.com</string>
+	<string>https://egasa-a8725.firebaseio.com</string>
 </dict>
 </plist>

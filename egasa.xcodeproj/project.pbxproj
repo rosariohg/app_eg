@@ -8,8 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		1A07D55C1F3F810A0011A997 /* Funciones.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A07D55B1F3F810A0011A997 /* Funciones.swift */; };
-		1A56E3B71F49198A0002FD86 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1A56E3B61F49198A0002FD86 /* GoogleService-Info.plist */; };
-		1A5A3E011F42542C00A1D695 /* charcani4_2.json in Resources */ = {isa = PBXBuildFile; fileRef = 1A5A3E001F42542C00A1D695 /* charcani4_2.json */; };
 		22A1BC7D3B1082662170349D /* Pods_egasa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A3FE2077C098D872C0D4ACA /* Pods_egasa.framework */; };
 		24AA02681F30F5E700165E5C /* HistoricoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24AA02671F30F5E700165E5C /* HistoricoViewController.swift */; };
 		24E2074B1F2A455500985900 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24E2074A1F2A455500985900 /* AppDelegate.swift */; };
@@ -21,14 +19,13 @@
 		24E2077D1F2A6B7400985900 /* IniciarSesionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24E2077C1F2A6B7400985900 /* IniciarSesionViewController.swift */; };
 		24E207821F2A79E300985900 /* turbina.gif in Resources */ = {isa = PBXBuildFile; fileRef = 24E207811F2A79E300985900 /* turbina.gif */; };
 		24E207841F2A8F4400985900 /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24E207831F2A8F4400985900 /* CollectionViewCell.swift */; };
+		24EF2A731F706FE5003145BB /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 24EF2A721F706FE5003145BB /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		0A3FE2077C098D872C0D4ACA /* Pods_egasa.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_egasa.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1A07D55B1F3F810A0011A997 /* Funciones.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Funciones.swift; sourceTree = "<group>"; };
-		1A56E3B61F49198A0002FD86 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		1A56E3B81F4928A10002FD86 /* egasa.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = egasa.entitlements; sourceTree = "<group>"; };
-		1A5A3E001F42542C00A1D695 /* charcani4_2.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = charcani4_2.json; sourceTree = "<group>"; };
 		24AA02671F30F5E700165E5C /* HistoricoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HistoricoViewController.swift; sourceTree = "<group>"; };
 		24E207471F2A455500985900 /* egasa.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = egasa.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		24E2074A1F2A455500985900 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -41,6 +38,7 @@
 		24E2077C1F2A6B7400985900 /* IniciarSesionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IniciarSesionViewController.swift; sourceTree = "<group>"; };
 		24E207811F2A79E300985900 /* turbina.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = turbina.gif; sourceTree = "<group>"; };
 		24E207831F2A8F4400985900 /* CollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
+		24EF2A721F706FE5003145BB /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		AE478A4D1BECF83F54C2A39A /* Pods-egasa.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-egasa.release.xcconfig"; path = "Pods/Target Support Files/Pods-egasa/Pods-egasa.release.xcconfig"; sourceTree = "<group>"; };
 		BB69E14742CAD78EAF57AFF0 /* Pods-egasa.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-egasa.debug.xcconfig"; path = "Pods/Target Support Files/Pods-egasa/Pods-egasa.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -92,8 +90,7 @@
 				24E207551F2A455500985900 /* LaunchScreen.storyboard */,
 				24E207581F2A455500985900 /* Info.plist */,
 				1A07D55B1F3F810A0011A997 /* Funciones.swift */,
-				1A5A3E001F42542C00A1D695 /* charcani4_2.json */,
-				1A56E3B61F49198A0002FD86 /* GoogleService-Info.plist */,
+				24EF2A721F706FE5003145BB /* GoogleService-Info.plist */,
 			);
 			path = egasa;
 			sourceTree = "<group>";
@@ -157,7 +154,7 @@
 				TargetAttributes = {
 					24E207461F2A455500985900 = {
 						CreatedOnToolsVersion = 8.3.3;
-						DevelopmentTeam = 9MFXUF664H;
+						DevelopmentTeam = 2LRH25NT82;
 						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
 							com.apple.Keychain = {
@@ -192,10 +189,9 @@
 			files = (
 				24E207571F2A455500985900 /* LaunchScreen.storyboard in Resources */,
 				24E207541F2A455500985900 /* Assets.xcassets in Resources */,
-				1A5A3E011F42542C00A1D695 /* charcani4_2.json in Resources */,
+				24EF2A731F706FE5003145BB /* GoogleService-Info.plist in Resources */,
 				24E207521F2A455500985900 /* Main.storyboard in Resources */,
 				24E207821F2A79E300985900 /* turbina.gif in Resources */,
-				1A56E3B71F49198A0002FD86 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -407,11 +403,15 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = egasa/egasa.entitlements;
-				DEVELOPMENT_TEAM = 9MFXUF664H;
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Helard  Valencia Arellano (2LRH25NT82)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = 2LRH25NT82;
 				INFOPLIST_FILE = egasa/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.debug.egasa;
+				PRODUCT_BUNDLE_IDENTIFIER = com.egasa.cshops;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -422,11 +422,15 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = egasa/egasa.entitlements;
-				DEVELOPMENT_TEAM = 9MFXUF664H;
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Helard  Valencia Arellano (2LRH25NT82)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = 2LRH25NT82;
 				INFOPLIST_FILE = egasa/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.debug.egasa;
+				PRODUCT_BUNDLE_IDENTIFIER = com.egasa.cshops;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
